@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đăng ký thông tin</title>
+    <style>
+    h1{
+        text-align: center;
+
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #dbeaf7;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+    input, select {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 3px solid #ccc;
+    }
+    button {
+      padding: 10px;
+      width: 100%;
+      background: #4da6ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #007acc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Form đăng ký</h1>
+    <form>
+      <input type="text" placeholder="Họ tên">
+      <input type="email" placeholder="Email">
+      <input type="tel" placeholder="Số điện thoại">
+      <select>
+        <option>Nam</option>
+        <option>Nữ</option>
+        <option>Khác</option>
+      </select>
+      <button type="submit">Gửi</button>
+    </form>
+  </div>
+</body>
+</html>
