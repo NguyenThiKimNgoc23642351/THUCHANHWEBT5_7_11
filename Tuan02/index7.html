@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư viện ảnh</title>
+    <style>
+        body{
+            background-color: rgb(224, 200, 246);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        h1{
+            color: black;
+            margin-bottom: 30px;
+            border: 3px solid white;
+            background-color: beige;
+
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        img {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px;
+        }
+
+         img:hover {
+        transform: scale(1.05);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            }
+
+        .container div {
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+    </style>
+</head>
+<body>
+  <h1>Thư viện ảnh bánh kem </h1>
+   <div class="container">
+    <div>
+      <img src="Image/ảnh bánh kem 01.jpg" alt="Ảnh 1" />
+      <p>Bánh kem 01</p>
+    </div>
+    <div>
+      <img src="Image/ảnh bánh kem 02.jpg" alt="Ảnh 2" />
+      <p>Bánh kem 02</p>
+    </div>
+    <div>
+      <img src="Image/ảnh bánh kem 03.jpg" alt="Ảnh 3" />
+      <p>Bánh kem 03</p>
+    </div>
+    <div>
+      <img src="Image/ảnh bánh kem 04.jpg" alt="Ảnh 4" />
+      <p>Bánh kem 04</p>
+    </div>
+    <div>
+      <img src="Image/ảnh bánh kem 05.jpg" alt="Ảnh 5" />
+      <p>Bánh kem 05</p>
+    </div>
+    <div>
+      <img src="Image/ảnh bánh kem 06.jpg" alt="Ảnh 6" />
+      <p>Bánh kem 06</p>
+    </div>
+  </div>
+</body>
+</html>
