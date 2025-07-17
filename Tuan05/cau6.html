@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <input id="so" type="text" placeholder="Nhập số">
+  <button onclick="bnt()">Check</button>
+  <p id="kq"></p>
+
+  <script>
+    function bnt() {
+      var so = document.getElementById('so').value;
+      var kq = document.getElementById('kq');
+
+      if (so =='') {
+        kq.textContent = 'Please input';
+        kq.style.color = 'red';
+      } else {
+        kq.textContent = 'Success';
+        kq.style.color = 'green';
+      }
+    }
+  </script>
+</body>
+</html>
