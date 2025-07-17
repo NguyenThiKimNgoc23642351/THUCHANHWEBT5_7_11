@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <input id="giatri" placeholder="Nhập dữ liệu">
+  <button onclick="kiemtra()">Kiểm tra</button>
+  <p id="kq"></p>
+
+  <script>
+    function kiemtra() {
+      var input = document.getElementById('giatri').value;
+      var kq = document.getElementById('kq');
+
+      var regexSo = /^\d$/;   
+      var regexSDT = /^0\d{9}$/;         
+
+      kq.textContent = "";
+
+      if (input) {
+        if (regexSDT.test(input)) {
+          kq.textContent = "Số ok";
+          kq.style.color = "green";
+        } else {
+          if (regexSo.test(input)) {
+            kq.textContent = "Là số nhưng không phải số điện thoại";
+            kq.style.color = "blue";
+          } else {
+            kq.textContent = "Không hợp lệ";
+            kq.style.color = "red";
+          }
+        }
+      } else {
+        kq.textContent = " Please input";
+        kq.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
+</body>
+</html>
