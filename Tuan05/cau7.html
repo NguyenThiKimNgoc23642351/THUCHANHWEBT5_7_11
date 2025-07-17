@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <input id="so"  placeholder="Nhập số điện thoại">
+  <button onclick="bnt()">Check</button>
+  <p id="kq"></p>
+
+  <script>
+    function bnt() {
+      var so = document.getElementById('so').value;
+      var kq = document.getElementById('kq');
+      var pattern = /^0\d{9}$/; 
+
+      if (pattern.test(so)) {
+        kq.textContent = " Số đúng";
+        kq.style.color = "green";
+      } else {
+        if (so == "") {
+          kq.textContent = " Please input";
+        } else {
+          kq.textContent = " Không hợp lệ ";
+        }
+        kq.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
