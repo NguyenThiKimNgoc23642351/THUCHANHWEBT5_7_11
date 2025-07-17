@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng hai số</title>
+</head>
+<body>
+    <input id="inputnumber" placeholder="Nhập số 1">
+    <span id="error1" ></span><br>
+    <input id="inputnumber2" placeholder="Nhập số 2">
+    <span id="error2"></span><br>
+    <button onclick="btn()">Click</button>
+    <p id="ketqua"></p>
+
+    <script>
+    function btn() {
+        var so1 = document.getElementById("inputnumber").value;
+        var so2 = document.getElementById("inputnumber2").value;
+        var error1 = document.getElementById("error1");
+        var error2 = document.getElementById("error2");
+        var ketqua = document.getElementById("ketqua");
+
+        var num1 = Number(so1);
+        var num2 = Number(so2);
+
+        error1.innerText = "";
+        error2.innerText = "";
+        ketqua.innerText = "";
+
+        if (isNaN(num1)) {
+            if (so1 == "") {
+                error1.innerText = "chưa nhập";
+            } else {
+                error1.innerText = "không phải là số";
+            }
+        }
+
+        if (isNaN(num2)) {
+            if (so2 == "") {
+                error2.innerText = "chưa nhập";
+            } else {
+                error2.innerText = " không phải là số";
+            }
+        }
+
+        if (!isNaN(num1)) {
+            if (!isNaN(num2)) {
+                var sum = num1 + num2;
+                ketqua.innerText = "Tổng là: " + sum;
+            }
+        }
+    }
+    </script>
+</body>
+</html>
