@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra dữ liệu</title>
+</head>
+<body>
+    <input id="inputname" placeholder="Nhập vào">
+    <button id="btn" onclick="btn()">Click</button>
+    <p id="ketqua"></p>
+
+    <script>
+         btn=() => {
+            var name = document.getElementById("inputname").value;
+            var ketqua = document.getElementById("ketqua");
+            var patternname = /^[a-zA-Z\s]+$/;
+
+            if (name === "") {
+                ketqua.innerText = "Chưa nhập";
+            }
+             else if (!isNaN(name)) {
+                ketqua.innerText = "Đây là số";
+            } 
+            else if (patternname.test(name)) {
+                ketqua.innerText = "Đây là text";
+                console.log("Đây là text");
+            }
+        }
+    </script>
+</body>
+</html>
