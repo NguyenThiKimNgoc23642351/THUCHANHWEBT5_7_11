@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id ="inputdate" type="date">
+    <button id="print">Print</button>
+    </p>
+    <script>
+        var inputdate = document.getElementById("inputdate");
+        var print = document.getElementById("print");
+        print.onclick =() =>{
+            console.log(inputdate.value);
+            var mydate = new Date(inputdate.value);
+        
+        console.log(mydate);
+        console.log(mydate.getDate());
+        console.log(mydate.getFullYear());
+        console.log(mydate.getMonth() +1);
+        }
+        
+</script>
+
+</body>
+</html>

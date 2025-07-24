@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id ="inputdate" type="date">
+    <button id="print">Print</button>
+    <p id="ketqua">
+    </p>
+    <script>
+        var inputdate = document.getElementById("inputdate");
+        var print = document.getElementById("print");
+        var p = document.getElementById("ketqua");
+
+        print.onclick = ()=>{
+            var mydate = new Date(inputdate.value);
+            console.log(mydate);
+            var today = new Date ();
+            if (mydate < today){
+                p.textContent =" Before";}
+            else if (mydate >today) {
+                p.textContent ="After";
+            }
+            else{
+                p.textContent ="Today"
+            }
+
+            }
+
+
+    </script>
+</body>
+</html>
+</html>
