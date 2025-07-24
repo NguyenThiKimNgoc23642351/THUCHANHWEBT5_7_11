@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="matkhau" type="text">
+  <button id="btn">Check</button>
+  <p id="ketqua"></p>
+
+  <script>
+    var mk = document.getElementById("matkhau");
+    var btn = document.getElementById("btn");
+    var p = document.getElementById("ketqua");
+
+    btn.onclick = () => {
+      var pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      if (pattern.test(mk.value)) {
+        p.innerText = "Mạnh";
+        p.style.color = "green";
+      } else {
+        p.innerText = "Yếu";
+        p.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

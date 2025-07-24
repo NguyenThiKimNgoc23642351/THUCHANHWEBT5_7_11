@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiểm tra tuổi</title>
+</head>
+<body>
+  <input id="birthdate" type="date">
+  <button id="btn">check</button>
+  <p id="ketqua"></p>
+
+  <script>
+    var birthdate = document.getElementById("birthdate");
+    var btn = document.getElementById("btn");
+    var p = document.getElementById("ketqua");
+
+    btn.onclick = () => {
+      var year = new Date(birthdate.value).getFullYear();
+      var now = new Date().getFullYear();
+      var age = now - year;
+
+      if (age > 18) {
+        p.textContent = "Tuổi: " + age;
+        p.style.color = "green";
+      } else {
+        p.textContent = "Tuổi: " + age;
+        p.style.color = "red";
+      }
+    };
+  </script>
+</body>
+</html>

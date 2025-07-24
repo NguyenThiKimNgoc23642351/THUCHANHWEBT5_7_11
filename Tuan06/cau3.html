@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="linkinput" type="text">
+    <button id="btn">Check</button>
+    <p id="ketqua"></p>
+    <script>
+        var linkinput = document.getElementById("linkinput");
+        var btn = document.getElementById("btn");
+        var p = document.getElementById("ketqua");
+        btn.onclick = () =>{
+            var link = linkinput.value;
+            console.log( link);
+
+            if(link.startsWith("https://") && link.endsWith(".com/")){
+                p.textContent ="Đúng link";
+                p.style.color ="green";
+                
+            }
+            else{
+                p.textContent ="sai links";
+                p.style.color ="red";
+            }
+        }
+    </script>
+</body>
+</html>
